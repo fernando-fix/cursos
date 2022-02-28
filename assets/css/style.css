@@ -74,6 +74,8 @@ main {
     margin-right: 10px;
 }
 
+/* Responsividade do vídeo */
+
 .video-area{
     flex: 1;
     border-radius: 15px;
@@ -81,10 +83,22 @@ main {
     background-color: #383b44;
 }
 
-iframe {
+.video-frame {
+    position: relative;
     width: 100%;
-    height: 500px;
-    border-radius: 5px;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .active {
