@@ -105,3 +105,21 @@ iframe {
 .active {
     background-color: green;
 }
+
+
+/* responsividade geral */
+
+@media (max-width: 1200px) {
+    .video-area{
+        order: 0;
+    }
+    .modulo-area {
+        order: 1;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .modulo-area {
+        width: auto;
+    }
+}
