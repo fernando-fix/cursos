@@ -1,6 +1,8 @@
 let videoList = [
    {
-       nome: "fernando",
-       sobrenome: "lima rodrigues"
-   }
+      modulo: "Introdução aos projetos",
+      aulas: [
+         ["Em produção...",""]
+      ]
+   },
 ];
