@@ -20,7 +20,7 @@ main {
 
 .container {
     background-color: #202225;
-    width: 1300px;
+    width: 1250px;
     border-radius: 15px;
     padding: 15px;
     display: flex;
@@ -107,7 +107,7 @@ iframe {
 }
 
 
-/* responsividade geral */
+/* responsividade notebook e tablet*/
 
 @media (max-width: 1200px) {
     .video-area{
@@ -121,5 +121,24 @@ iframe {
     }
     .modulo-area {
         width: auto;
+    }
+}
+
+/* responsividade celular*/
+@media (max-width: 800px) {
+    header {
+        height: 0;
+    }
+    .video-area{
+        padding: 5px;
+        border-radius: 5px
+    }
+    .modulo-area {
+        padding: 5px;
+        border-radius: 5px
+    }
+    .container {
+        border-radius: 5px;
+        padding: 5px;
     }
 }
