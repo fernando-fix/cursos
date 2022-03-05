@@ -9,21 +9,24 @@ let moduloItem = document.querySelectorAll('.modulo-item');
 
 
 // Events
+showVideo(0, 0);
 montarAulas();
-showVideo(0,0);
+changeActiveButton(moduloNumber, aulaNumber);
 
 // Functions
 function showVideo(mNumber, aNumber) {
-    if (videoList[mNumber].aulas[aNumber][2] = true) {
-        let url = videoList[mNumber].aulas[aNumber][1];
-        videoFrame.innerHTML = `<iframe controls="0" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    } else {
-        videoFrame.innerHTML = 'em breve...'
-    }
+    let url = videoList[mNumber].aulas[aNumber][1];
+    videoFrame.innerHTML = `<iframe controls="0" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    moduloNumber = mNumber;
+    aulaNumber = aNumber;
+    montarAulas();
 }
 
 function montarAulas() {
     let html = '';
+    let modulo = 0;
+    let aula = 0;
+
     videoList.forEach((moduloElement, moduloIndex) => {
         html += `<div class="modulo-container"><div class="modulo-title">${moduloElement.modulo}</div>`;
         moduloElement.aulas.forEach((aulaElement, aulaIndex) => {
@@ -32,6 +35,14 @@ function montarAulas() {
         html += `</div>`;
     });
     moduloArea.innerHTML = html;
+
+    //colocar active no botão
+    document.querySelectorAll('.modulo-item').forEach((aulaElement, aulaIndex) => {
+        aulaElement.querySelector('span').classList.remove('active');
+        modulo = aulaElement.getAttribute('modulo');
+        aula = aulaElement.getAttribute('aula');
+        if((moduloNumber == +modulo) && (aulaNumber == +aula)) {
+            aulaElement.querySelector('span').classList.add('active');
+        }
+    });
 }
-
-
