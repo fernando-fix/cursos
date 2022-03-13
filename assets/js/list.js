@@ -13,9 +13,11 @@ let videoList = [
       ]
    },
    {
-      modulo: "Ferramentas para desenvolvimento",
+      modulo: "Revisão de informática (Windows)",
       aulas: [
-         ["Em breve...",""]
+         ["O que é extensão de arquivo?","https://www.youtube.com/embed/FvHtq2_KAzE"],
+         ["Como utilizar o terminal do windows","https://www.youtube.com/embed/_XkOqDwlhxU"],
+         ["Exercício de criação de pastas","https://www.youtube.com/embed/24pRLPfI6_U"]
       ]
    },
 ];
